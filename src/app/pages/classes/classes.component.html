@@ -1,0 +1,75 @@
+<div class="container">
+	<div class="columns is-multiline">
+		<div class="column is-6">
+			<div class="card">
+				<header class="card-header">
+					<p class="card-header-title">Add Class</p>
+				</header>
+				<div class="card-content">
+					<div class="content">
+            <div class="field">
+							<div class="control">
+								<input type="text" class="input is-rounded" placeholder="Video Title" [(ngModel)]="title"/>
+							</div>
+						</div>
+            <div class="field">
+              <div class="select is-rounded is-fullwidth">
+                <select [(ngModel)]="teacher">
+                  <option value="0" selected>Select A Teacher</option>
+                  <option *ngFor="let teacher of allTeachers">{{teacher.name}}</option>
+                </select>
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<input type="date" class="input is-rounded" [(ngModel)]="date">
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<input type="text" class="input is-rounded" placeholder="Youtube Video ID" [(ngModel)]="videoId"/>
+							</div>
+						</div>
+					</div>
+          <iframe width="100%" height="190" [src]="this.crud.cleanLink(this.videoId)" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            style="margin-bottom: -10px;" allowfullscreen></iframe>
+				</div>
+				<footer class="card-footer">
+					<a (click)="addCourse()" class="card-footer-item">Add</a>
+				</footer>
+			</div>
+		</div>
+
+		<div class="column is-6">
+      <div class="table-container">
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Teacher</th>
+              <th>Date</th>
+              <th>Video</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let class of allClasses">
+              <td>{{class.title}}</td>
+              <td>{{class.teacher}}</td>
+              <td>{{class.date.toDate() | date:'mediumDate'}}</td>
+              <td><a [href]="class.videoLink" target="_blank">Open</a></td>
+              <td>
+                <div class="buttons">
+                  <button class="button is-small" (click)="this.crud.detele('class',class.id)">Delete</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+		</div>
+
+	</div>
+</div>
