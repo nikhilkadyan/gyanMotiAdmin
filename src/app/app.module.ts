@@ -12,10 +12,10 @@ import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 import { AuthService } from './core/auth.service';
+import { CrudService } from './core/crud.service';
 import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MurliComponent } from './pages/murli/murli.component';
-import { CrudService } from './core/crud.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CommentaryComponent } from './pages/commentary/commentary.component';
 import { CoursesComponent } from './pages/courses/courses.component';
