@@ -24,7 +24,7 @@ export class CrudService {
   }
 
   public read(endPoint) {
-    return this.firestore.collection(endPoint).snapshotChanges();
+    return this.firestore.collection(endPoint, ref => ref.orderBy('date','desc')).snapshotChanges();
   }
 
   public update(endPoint, data) {

@@ -28,7 +28,8 @@ export class TeachersComponent implements OnInit {
       return alert("Please fill all of the fields");
     }
     let data = {
-      name: this.name
+      name: this.name,
+      date: new Date()
     };
     this.crud.create("teachers", data).then(resp => {
       if (resp) {
