@@ -7,6 +7,7 @@ import { CommentaryComponent } from './pages/commentary/commentary.component';
 import { ClassesComponent } from './pages/classes/classes.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { TeachersComponent } from './pages/teachers/teachers.component';
+import { TextComponent } from './pages/text/text.component';
 
 const appRoutes:Routes=[
   {path: '', component: LoginComponent},
@@ -14,6 +15,7 @@ const appRoutes:Routes=[
     {path: 'murli', component: MurliComponent},
     {path: 'commentary', component: CommentaryComponent},
     {path: 'classes', component: ClassesComponent},
+    {path: 'text', component: TextComponent},
     {path: 'categories', component: CategoriesComponent},
     {path: 'teachers', component: TeachersComponent},
   ]}

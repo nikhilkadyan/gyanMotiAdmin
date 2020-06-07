@@ -21,6 +21,7 @@ import { CommentaryComponent } from './pages/commentary/commentary.component';
 import { ClassesComponent } from './pages/classes/classes.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { TeachersComponent } from './pages/teachers/teachers.component';
+import { TextComponent } from './pages/text/text.component';
 
 @NgModule({
   imports:      [
@@ -31,7 +32,7 @@ import { TeachersComponent } from './pages/teachers/teachers.component';
     AngularFirestoreModule,
     AngularFireAuthModule, 
     ],
-  declarations: [ AppComponent, LoginComponent, DashboardComponent, MurliComponent, NavbarComponent, CommentaryComponent, ClassesComponent, CategoriesComponent, TeachersComponent ],
+  declarations: [ AppComponent, LoginComponent, DashboardComponent, MurliComponent, NavbarComponent, CommentaryComponent, ClassesComponent, CategoriesComponent, TeachersComponent, TextComponent ],
   bootstrap:    [ AppComponent ],
   providers: [AuthService, CrudService]
 })
