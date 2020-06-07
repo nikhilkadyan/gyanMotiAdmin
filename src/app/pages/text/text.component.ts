@@ -37,7 +37,7 @@ export class TextComponent implements OnInit {
       body: this.body,
       date: new Date(this.date)
     };
-    this.crud.create("t", data).then(resp => {
+    this.crud.create("text", data).then(resp => {
       if (resp) {
         this.title = '';
         this.body = '';

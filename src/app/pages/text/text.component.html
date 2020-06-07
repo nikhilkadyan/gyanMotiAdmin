@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="columns is-multiline">
-		<div class="column is-8 is-offset-2">
+		<div class="column is-6">
 			<div class="card">
 				<header class="card-header">
 					<p class="card-header-title">Add Text Murli</p>
@@ -33,13 +33,12 @@
       <div class="card">
         <header class="card-header">
           <p class="card-header-title">
-            {{class.title}}
+            <b class="is-uppercase">{{class.title}}</b>
           </p>
         </header>
         <div class="card-content">
-        <div>{{class.body}}</div>
-
-        <small>{{class.date.toDate() | date:'mediumDate'}}</small>
+          <div>{{class.body}}</div>
+          <br>{{class.date.toDate() | date:'mediumDate'}}
         </div>
         <footer class="card-footer">
           <div class="card-footer-item" (click)="this.crud.detele('text',class.id)">
