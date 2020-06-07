@@ -1,0 +1,50 @@
+<div class="container">
+	<div class="columns is-multiline">
+		<div class="column is-12">
+			<div class="card">
+				<header class="card-header">
+					<p class="card-header-title">Add Text Murli</p>
+				</header>
+				<div class="card-content">
+					<div class="content">
+            <div class="field">
+							<div class="control">
+								<input type="text" class="input is-rounded" placeholder="Video Title" [(ngModel)]="title"/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<input type="date" class="input is-rounded" [(ngModel)]="date">
+							</div>
+						</div>
+					
+					</div>
+				</div>
+				<footer class="card-footer">
+					<a (click)="addText()" class="card-footer-item">Add</a>
+				</footer>
+			</div>
+		</div>
+
+		<div class="column is-6" *ngFor="let class of allText">
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            {{class.title}}
+          </p>
+        </header>
+        <div class="card-content">
+        <div>{{class.body}}</div>
+
+        <small>{{class.date.toDate() | date:'mediumDate'}}</small>
+        </div>
+        <footer class="card-footer">
+          <div class="card-footer-item" (click)="this.crud.detele('text',class.id)">
+            Delete
+          </div>
+        </footer>
+      </div>
+		</div>
+
+	</div>
+</div>
