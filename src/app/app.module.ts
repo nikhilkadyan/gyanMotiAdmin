@@ -18,7 +18,6 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MurliComponent } from './pages/murli/murli.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CommentaryComponent } from './pages/commentary/commentary.component';
-import { CoursesComponent } from './pages/courses/courses.component';
 import { ClassesComponent } from './pages/classes/classes.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { TeachersComponent } from './pages/teachers/teachers.component';
@@ -32,7 +31,7 @@ import { TeachersComponent } from './pages/teachers/teachers.component';
     AngularFirestoreModule,
     AngularFireAuthModule, 
     ],
-  declarations: [ AppComponent, LoginComponent, DashboardComponent, MurliComponent, NavbarComponent, CommentaryComponent, CoursesComponent, ClassesComponent, CategoriesComponent, TeachersComponent ],
+  declarations: [ AppComponent, LoginComponent, DashboardComponent, MurliComponent, NavbarComponent, CommentaryComponent, ClassesComponent, CategoriesComponent, TeachersComponent ],
   bootstrap:    [ AppComponent ],
   providers: [AuthService, CrudService]
 })
